@@ -1,0 +1,47 @@
+/* COMMON */
+
+body {
+  color: #333; /* 너무 까맣지도 흐리지도 않는 세련된 블랙 */
+  font-size: 16px; /* 웹의 기본 폰트 크기, "명시적 선언" */
+  font-weight: 400;
+  line-height: 1.4; /* 폰트마다 다르지만 1.4 추천 */
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+img {
+  display: block;
+  /* 
+  이미지는 문자로 취급되어 하단에 문자를 위한 여백이 생김 
+  따라서 block으로 설정해서 불필요한 여백을 없애는것이 기본
+  */
+}
+
+/* HEADER */
+header {
+  background-color: royalblue;
+}
+
+header .inner {
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: orange;
+  position: relative; /* 구조적 부모 요소 선언, 하위에서 이것을 기준으로 배치할 수 있다. */
+}
+
+header .inner .logo {
+  width: 75px;
+  height: 75px;
+  margin: auto 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; /*원하는 가운데 위치에 있지만 명확히 부모의 왼쪽에 붙어있다, "명시적 선언" */
+  /*
+  # position: absolute를 사용해서 구조 "배치" 하는 법(정렬과 배치의 개념은 다르다)
+  1: 구조적 부모 요소의 position: relative 선언
+  2: 요소의 width, heigth 값 필수
+  3: 기준점 위치 지정 top, bottom || left, right => 모두 입력하면 정 중앙 배치 가능
+  4: 브라우저 자동 계산, margine: auto 0; || margine: 0 auto; => 모두입력시 margine: auto;
+  */
+}
